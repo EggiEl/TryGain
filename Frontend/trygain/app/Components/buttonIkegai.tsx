@@ -2,6 +2,7 @@
 
 
 import { useState, useEffect } from "react";
+import ikegaistyle from "@/Styles/ikegai.module.css"
 
 interface IkegaiButtonProps {
   name: string;
@@ -23,15 +24,28 @@ export default function IkegaiButton({ name, lifting_up } : IkegaiButtonProps)
   const handleClick = () => {
     
     const not_enough = lifting_up(name);
-    if (not_enough) 
+    if (not_enough === true ) 
     {setClicked((prevClicked) => !prevClicked);}
+
     
   };
 
   return (
-    <button onClick={handleClick} style={{ backgroundColor: clicked ? "blue" : "transparent" }}>
-      {name}
-    </button>
+            <div className={ikegaistyle.buttonbox} >
+                    <div className={ikegaistyle.button_outer} style={{ backgroundColor: clicked ? "rgba(233, 236, 245, 1)" : "white" }}>
+                    <button className={ikegaistyle.ikegaibutton} onClick={handleClick}  style={{ backgroundColor: clicked ? "rgba(233, 236, 245, 1)" : "white" }}>
+                    {name}
+                    </button>
+                    </div>
+                    
+            </div>
+
+
+
+
+
+
+    
   );
 };
 
