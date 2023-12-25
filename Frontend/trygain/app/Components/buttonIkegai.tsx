@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 interface IkegaiButtonProps {
   name: string;
-  lifting_up: (buttonName: string) => void;
+  lifting_up: (buttonName: string) => boolean;
 }
 
 export default function IkegaiButton({ name, lifting_up } : IkegaiButtonProps)
@@ -21,8 +21,11 @@ export default function IkegaiButton({ name, lifting_up } : IkegaiButtonProps)
   }, [clicked]);
 
   const handleClick = () => {
-    setClicked((prevClicked) => !prevClicked);
-    lifting_up(name);
+    
+    const not_enough = lifting_up(name);
+    if (not_enough) 
+    {setClicked((prevClicked) => !prevClicked);}
+    
   };
 
   return (
