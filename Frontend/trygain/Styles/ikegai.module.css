@@ -50,3 +50,10 @@
     
     width: 137px; color: #0D276B; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word
 }
+
+.textcolorheading {
+    width: 100%; text-align: center; color: #0D276B; font-size: 36px; font-family: Inter; font-weight: 700; word-wrap: break-word; 
+    padding-top: 82px; padding-inline: 70px;
+    margin-bottom : 20px ; 
+
+}
