@@ -31,7 +31,7 @@ export default function IkegaiButton({ name, lifting_up } : IkegaiButtonProps)
   };
 
   return (
-            <div className={ikegaistyle.buttonbox} >
+            <div  >
                     <div className={ikegaistyle.button_outer} style={{ backgroundColor: clicked ? "rgba(233, 236, 245, 1)" : "white" }}>
                     <button className={ikegaistyle.ikegaibutton} onClick={handleClick}  style={{ backgroundColor: clicked ? "rgba(233, 236, 245, 1)" : "white" }}>
                     {name}

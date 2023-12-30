@@ -1,9 +1,9 @@
 "use client"
 
 import { useState, useEffect } from 'react';
-import IkegaiButton from './Components/buttonIkegai';
+import IkegaiButton from '../Components/buttonIkegai';
 import ikegaistyle from "@/Styles/ikegai.module.css"
-import CalltoactionIkegai from "./Components/calltoaction_ikegai"
+import CalltoactionIkegai from "../Components/calltoaction_ikegai"
 
 
 export default function Home() {
@@ -42,11 +42,10 @@ export default function Home() {
     <div style={{ background: "rgba(244, 246, 252, 1)", height: "100vh", width: "100svw" }}>
     <div className={ikegaistyle.background}  >
       <div style={{ width: '70%', marginTop: "9vh", marginBottom: "2vh", textAlign: 'center', color: '#0D276B', fontSize: 36, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word' }}>
-        Was du in der Lage bist zu tun
+      Für was du bezahlt wirst
       </div>
       <div style={{ marginBottom: "4%", width: '290px', height: "38px", textAlign: 'center', color: '#0D276B', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word' }}>
-        Was sind 3 Charaktereigenschaften, die dich am besten beschreiben?
-      </div>
+Was sind drei Fachrichtung die dich interessien?      </div>
     </div>
   
     <div>
@@ -91,7 +90,7 @@ export default function Home() {
         <IkegaiButton name="Zuverlässig" lifting_up={handleClick} />
       </div>
     <div style={{paddingTop: "7%"}}>
-      <CalltoactionIkegai linkname ={"/Ikegai_wie_du_tickst"} maxnum={anzahlAuswahl} name={"Nächste Frage"} />
+      <CalltoactionIkegai linkname = {""} maxnum={anzahlAuswahl} name={"Nächste Frage"} />
     </div>
     
     </div>
