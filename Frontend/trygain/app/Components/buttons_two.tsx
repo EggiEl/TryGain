@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ikegaistyle from "@/Styles/ikegai.module.css"
 
 interface ISwitchbutton {
   firstname: string;
@@ -57,20 +58,27 @@ export default function Switchbutton({firstname,secondname,lifting_up} : ISwitch
   };}
 
   return (
-    <div>
-      <button
-        id="firstbutton"
-        onClick={handleClick}
-        style={{
-          backgroundColor: clicked_first ? "black" : "white",
-        }}
-      >
-        {firstname}
-      </button>
-      <button   id="secondbutton"
-        onClick={handleClick} style={{backgroundColor: clicked_second ? "black": "white",
-        }}>{secondname}</button>
+
+    <div style={{display: "flex" ,columnGap: "58px",  flexDirection : "row"}}>
+    <div id="firstbutton" className={ikegaistyle.button_outer} style={{ backgroundColor: clicked_first ? "rgba(233, 236, 245, 1)" : "white" }}>
+    <button  id="firstbutton" className={ikegaistyle.ikegaibutton} onClick={handleClick}  style={{ backgroundColor: clicked_first ? "rgba(233, 236, 245, 1)" : "white" }}>
+    {firstname}
+    </button>
     </div>
+
+    <div id="secondbutton" className={ikegaistyle.button_outer} style={{ backgroundColor: clicked_second ? "rgba(233, 236, 245, 1)" : "white" }}>
+    <button id="secondbutton" className={ikegaistyle.ikegaibutton} onClick={handleClick}  style={{ backgroundColor: clicked_second ? "rgba(233, 236, 245, 1)" : "white" }}>
+    {secondname}
+    </button>
+    </div>
+    
+</div>
+
+
+
+
+
+   
   );
 
 }
