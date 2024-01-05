@@ -45,7 +45,7 @@ export default function Home() {
       Für was du bezahlt wirst
       </div>
       <div style={{ marginBottom: "4%", width: '290px', height: "38px", textAlign: 'center', color: '#0D276B', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word' }}>
-Was sind drei Fachrichtung die dich interessien?      </div>
+Was beschreibt dich am besten?     </div>
     </div>
   
     <div>
@@ -64,7 +64,7 @@ Was sind drei Fachrichtung die dich interessien?      </div>
           />
           <div
             style={{
-              width: "20%",
+              width: "60%",
               height: 9,
               position: 'relative',
               background: '#FDB05E',
@@ -79,18 +79,16 @@ Was sind drei Fachrichtung die dich interessien?      </div>
     <div style={{backgroundColor: "rgba(244, 246, 252, 1)"}}>
       <p className={ikegaistyle.textcolor}>{anzahlAuswahl}/3 ausgewählt</p>
       <div className={ikegaistyle.buttonbox}>
-        <IkegaiButton name="Selbstdiszipliniert" lifting_up={handleClick} />
-        <IkegaiButton name="Ambitioniert" lifting_up={handleClick} />
-        <IkegaiButton name="Emphatisch" lifting_up={handleClick} />
-        <IkegaiButton name="Kreativ" lifting_up={handleClick} />
-        <IkegaiButton name="Offen für Neues" lifting_up={handleClick} />
-        <IkegaiButton name="Anpassungsfähig" lifting_up={handleClick} />
-        <IkegaiButton name="Selbstbewusst" lifting_up={handleClick} />
-        <IkegaiButton name="Teamplayer" lifting_up={handleClick} />
-        <IkegaiButton name="Zuverlässig" lifting_up={handleClick} />
+        <IkegaiButton name="Teamarbeit" lifting_up={handleClick} />
+        <IkegaiButton name="Management" lifting_up={handleClick} />
+        <IkegaiButton name="Entscheiden" lifting_up={handleClick} />
+        <IkegaiButton name="Technikkompetenz" lifting_up={handleClick} />
+        <IkegaiButton name="Sozialkompetenz" lifting_up={handleClick} />
+        <IkegaiButton name="Universalqualifikationen" lifting_up={handleClick} />
+        
       </div>
     <div style={{paddingTop: "7%"}}>
-      <CalltoactionIkegai linkname = {""} maxnum={anzahlAuswahl} name={"Nächste Frage"} />
+      <CalltoactionIkegai activatenum={3} linkname = {"/IKEGAI_welt_braucht"} maxnum={anzahlAuswahl} name={"Nächste Frage"} />
     </div>
     
     </div>

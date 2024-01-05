@@ -54,7 +54,7 @@
 .ikegaibutton{
     
     border: none ; 
-    
+    background-color: transparent;
     width: 137px; color: #0D276B; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word
 }
 

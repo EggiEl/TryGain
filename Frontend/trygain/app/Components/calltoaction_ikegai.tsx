@@ -8,26 +8,27 @@ import ikegaistyle from "@/Styles/ikegai.module.css"
 interface Calltoactionbutton {
     maxnum : number ,
     name : string , 
-    linkname : string 
+    linkname : string,
+    activatenum : number 
     
     
 }
 
 
 
-export default function CalltoactionIkegai({maxnum, name, linkname } : Calltoactionbutton) { 
+export default function CalltoactionIkegai({maxnum, name, linkname, activatenum } : Calltoactionbutton) { 
     const [stateactivate, setstateacitvate] = useState(false)
 
 
   const handleClick = () => {
-    if (maxnum ==3 ) {
+    if (maxnum ==activatenum ) {
       const baseUrl = window.location.origin;;
       window.location.href = `${baseUrl}${linkname}`;
     }
   };
 
     useEffect(() => {
-        if (maxnum == 3 ){
+        if (maxnum == activatenum ){
           setstateacitvate(true)
     
         } else {

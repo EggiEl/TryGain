@@ -4,7 +4,7 @@ import ikegaistyle from "@/Styles/ikegai.module.css"
 interface ISwitchbutton {
   firstname: string;
   secondname: string;
-  lifting_up: (buttonName: string) => void;
+  lifting_up: (buttonName: string, unselectedname: string) => void;
 }
 
 export default function Switchbutton({firstname,secondname,lifting_up} : ISwitchbutton) {
@@ -32,7 +32,7 @@ export default function Switchbutton({firstname,secondname,lifting_up} : ISwitch
     const { id } = event.currentTarget;
 
     if (id === "firstbutton") {
-    lifting_up(firstname)
+    lifting_up(firstname, secondname)
       console.log("Erster Button geklickt");
       if (clicked_first == true )
       setfirst(false);
@@ -45,7 +45,7 @@ export default function Switchbutton({firstname,secondname,lifting_up} : ISwitch
 
 
     else if (id === "secondbutton") {
-        lifting_up(secondname)
+        lifting_up(secondname, firstname)
         console.log("Zweiter Button geklickt");
       if (clicked_second == true )
       
