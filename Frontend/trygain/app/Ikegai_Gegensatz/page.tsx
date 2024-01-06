@@ -8,30 +8,40 @@ import { wrap } from "module";
 
 export default function Gegensatz_Ikegai() {
   const [auswahl, setAuswahl] = useState<string[]>([]);
-  const [gesamtauswahl, setgesamtauswahl] = useState<string[]>([]);
+  
 
   useEffect(() => {
-    console.log("Gesamtauswahl:", gesamtauswahl)
     console.log("Current:", auswahl);
   }, [auswahl]);
 
-  function handleClick(selectedname: string, unselectedname : string ) {
+  function handleClick(selectedname: string, unselectedname : string, clicked_first : boolean, clicked_second : boolean ) {
     console.log(selectedname, "Wurde geklicked");
+    console.log(selectedname, ":selected" , unselectedname, ":unselected")
+    console.log(clicked_first, clicked_second)
 
-    setAuswahl([]);
-
-    setAuswahl((prevAuswahl) => [...prevAuswahl, selectedname]);
-
-
-    if (!auswahl.includes(selectedname)) {
-      setgesamtauswahl((prevAuswahl) => [...prevAuswahl, selectedname]);
-
-      return true;
-    } else if (auswahl.includes(selectedname)) {
-      setgesamtauswahl((prevAuswahl) =>
-        prevAuswahl.filter((item) => item !== selectedname)
-      );
+    if (clicked_first === true && !auswahl.includes(selectedname)) {
+      setAuswahl((prevAuswahl) =>
+        prevAuswahl.filter((item) => item !== unselectedname)) ; 
+      setAuswahl((prevAuswahl) => [...prevAuswahl, selectedname]);
     }
+
+    else if (clicked_second == true && !auswahl.includes(unselectedname)) {
+      setAuswahl((prevAuswahl) =>
+        prevAuswahl.filter((item) => item !== selectedname)) ; 
+      setAuswahl((prevAuswahl) => [...prevAuswahl, unselectedname])
+    }
+    
+    else if (clicked_first == false && clicked_second == false ) { 
+      setAuswahl((prevAuswahl) =>
+        prevAuswahl.filter((item) => item !== unselectedname)) ; 
+        setAuswahl((prevAuswahl) =>
+        prevAuswahl.filter((item) => item !== selectedname)) ; 
+    }
+
+
+
+
+
   }
 
   return (
@@ -82,7 +92,7 @@ export default function Gegensatz_Ikegai() {
           <Switchbutton firstname="Streng" secondname="Gelassen" lifting_up={handleClick} />
         </div>
         <div style={{ paddingTop: "7%" }}>
-          <CalltoactionIkegai activatenum={4} linkname={"/IKEGAI_bezahlt"} maxnum={gesamtauswahl.length} name={"Nächste Frage"} />
+          <CalltoactionIkegai activatenum={4} linkname={"/IKEGAI_bezahlt"} maxnum={auswahl.length} name={"Nächste Frage"} />
         </div>
       </div>
     </div>

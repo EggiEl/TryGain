@@ -4,7 +4,7 @@ import ikegaistyle from "@/Styles/ikegai.module.css"
 interface ISwitchbutton {
   firstname: string;
   secondname: string;
-  lifting_up: (buttonName: string, unselectedname: string) => void;
+  lifting_up: (buttonName: string, unselectedname: string, clicked_first : boolean , clicked_second : boolean ) => void;
 }
 
 export default function Switchbutton({firstname,secondname,lifting_up} : ISwitchbutton) {
@@ -12,49 +12,40 @@ export default function Switchbutton({firstname,secondname,lifting_up} : ISwitch
   const [clicked_second, setsecond] = useState(false);
 
   useEffect(() => {
-    if (clicked_first) {
-      console.log("Css Blau");
-    } else {
-      console.log("Css keine Farbe");
-    }
-  }, [clicked_first]);
+    console.log(clicked_first, clicked_second)
+    lifting_up(firstname, secondname, clicked_first, clicked_second)
+    
+  }, [clicked_first, clicked_second]);
 
 
-  useEffect(() => {
-    if (clicked_first) {
-      console.log("Css Blau");
-    } else {
-      console.log("Css keine Farbe");
-    }
-  }, [clicked_second]);
+ 
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     const { id } = event.currentTarget;
 
     if (id === "firstbutton") {
-    lifting_up(firstname, secondname)
       console.log("Erster Button geklickt");
       if (clicked_first == true )
       setfirst(false);
-        else {
-            setfirst(true )
-            setsecond(false)
+    else {
+      setfirst(true)
+      setsecond(false)
     }
+    
     }
-
-
 
     else if (id === "secondbutton") {
-        lifting_up(secondname, firstname)
-        console.log("Zweiter Button geklickt");
+      console.log("Zweiter Button geklickt");
       if (clicked_second == true )
       
       setsecond(false);
-        else {
-            setsecond(true)
-            setfirst(false)
-
-    }
+      else {
+        setsecond(true)
+        setfirst(false)
+        
+      }
+      
+    
   };}
 
   return (
