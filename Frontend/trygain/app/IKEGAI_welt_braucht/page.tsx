@@ -87,11 +87,11 @@ export default function Home() {
         <IkegaiButton name="Gesundheit & Medizin" lifting_up={handleClick} />
         <IkegaiButton name="Wirtschaft & Verkauf" lifting_up={handleClick} />
         <IkegaiButton name="Handwerk & Technik " lifting_up={handleClick} />
-        <IkegaiButton name="Informatik & Logik" lifting_up={handleClick} />
+       
         <IkegaiButton name="Sicherheit" lifting_up={handleClick} />
       </div>
     <div style={{paddingTop: "7%"}}>
-      <CalltoactionIkegai activatenum={3} linkname = {""} maxnum={anzahlAuswahl} name={"Nächste Frage"} />
+      <CalltoactionIkegai activatenum={3} linkname = {""} maxnum={anzahlAuswahl} name={"Test beenden"} />
     </div>
     
     </div>

@@ -42,7 +42,7 @@ export default function Home() {
     <div style={{ background: "rgba(244, 246, 252, 1)", height: "100vh", width: "100svw" }}>
     <div className={ikegaistyle.background}  >
       <div style={{ width: '70%', marginTop: "9vh", marginBottom: "2vh", textAlign: 'center', color: '#0D276B', fontSize: 36, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word' }}>
-      Für was du bezahlt wirst
+      Für was du bezahlt werden kannst
       </div>
       <div style={{ marginBottom: "4%", width: '290px', height: "38px", textAlign: 'center', color: '#0D276B', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word' }}>
 Was beschreibt dich am besten?     </div>
@@ -79,12 +79,12 @@ Was beschreibt dich am besten?     </div>
     <div style={{backgroundColor: "rgba(244, 246, 252, 1)"}}>
       <p className={ikegaistyle.textcolor}>{anzahlAuswahl}/3 ausgewählt</p>
       <div className={ikegaistyle.buttonbox}>
-        <IkegaiButton name="Teamarbeit" lifting_up={handleClick} />
-        <IkegaiButton name="Management" lifting_up={handleClick} />
-        <IkegaiButton name="Entscheiden" lifting_up={handleClick} />
-        <IkegaiButton name="Technikkompetenz" lifting_up={handleClick} />
-        <IkegaiButton name="Sozialkompetenz" lifting_up={handleClick} />
-        <IkegaiButton name="Universalqualifikationen" lifting_up={handleClick} />
+        <IkegaiButton name="Teamfähigkeit" lifting_up={handleClick} />
+        <IkegaiButton name="Gutes Management" lifting_up={handleClick} />
+        <IkegaiButton name="Entscheidungsfähig" lifting_up={handleClick} />
+        <IkegaiButton name="Technikkompetent" lifting_up={handleClick} />
+        <IkegaiButton name="Sozialkompetent" lifting_up={handleClick} />
+        <IkegaiButton name="Allrounder" lifting_up={handleClick} />
         
       </div>
     <div style={{paddingTop: "7%"}}>
