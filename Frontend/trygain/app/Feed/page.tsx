@@ -13,7 +13,7 @@ export default function Feed() {
             </div> 
             <div style={{position:"relative", top: '10.5%'}}>
                 <div style={{height: "100svh", width: "100svw"}}>
-                <Beitrag bild_url={"/BeitragI&D.png"} heading="Hochschule München" caption= {"Lerne Informatik als auch Design zu verstehen und miteinander zu verknüpfen."} />
+                <Beitrag smallheading="Informatik und Design"   bild_url="/BeitragI&D.png" heading="Hochschule München" caption= "Lerne Informatik als auch Design zu verstehen und miteinander zu verknüpfen." />
             </div>
             </div>
         
