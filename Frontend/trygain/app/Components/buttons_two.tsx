@@ -50,13 +50,13 @@ export default function Switchbutton({firstname,secondname,lifting_up} : ISwitch
 
   return (
 
-    <div style={{display: "flex" ,columnGap: "58px",  flexDirection : "row"}}>
+    <div style={{display: "flex" ,columnGap: "2vw",  flexDirection : "row", alignItems : "baseline" }}>
     <div id="firstbutton" className={ikegaistyle.button_outer} style={{ backgroundColor: clicked_first ? "rgba(233, 236, 245, 1)" : "white" }}>
     <button  id="firstbutton" className={ikegaistyle.ikegaibutton} onClick={handleClick}  style={{ backgroundColor: clicked_first ? "rgba(233, 236, 245, 1)" : "white" }}>
     {firstname}
     </button>
     </div>
-
+    <div style={{color: '#0D276B', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>oder</div>
     <div id="secondbutton" className={ikegaistyle.button_outer} style={{ backgroundColor: clicked_second ? "rgba(233, 236, 245, 1)" : "white" }}>
     <button id="secondbutton" className={ikegaistyle.ikegaibutton} onClick={handleClick}  style={{ backgroundColor: clicked_second ? "rgba(233, 236, 245, 1)" : "white" }}>
     {secondname}
