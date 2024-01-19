@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import IkegaiButton from '../Components/buttonIkegai';
 import ikegaistyle from "@/Styles/ikegai.module.css"
 import CalltoactionIkegai from "../Components/calltoaction_ikegai"
-import { relative } from 'path';
 
 
 export default function Home() {
@@ -43,10 +42,11 @@ export default function Home() {
     <div style={{ background: "rgba(244, 246, 252, 1)", height: "100svh", width: "100svw" }}>
     <div className={ikegaistyle.background}  >
       <div style={{ width: '70%', marginTop: "9vh", marginBottom: "2vh", textAlign: 'center', color: '#0D276B', fontSize: 36, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word' }}>
-      Was die Welt braucht
+        Was du in der Lage bist zu tun
       </div>
       <div style={{ marginBottom: "4%", width: '290px', height: "38px", textAlign: 'center', color: '#0D276B', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word' }}>
-      Was sind drei Fachrichtungen die dich interessieren?</div>
+        Was sind 3 Charaktereigenschaften, die dich am besten beschreiben?
+      </div>
     </div>
   
     <div>
@@ -65,7 +65,7 @@ export default function Home() {
           />
           <div
             style={{
-              width: "80%",
+              width: "20%",
               height: 9,
               position: 'relative',
               background: '#FDB05E',
@@ -77,21 +77,21 @@ export default function Home() {
       </div>
     </div>
   
-    <div style={{backgroundColor: "rgba(244, 246, 252, 1)", position: "relative"}}>
+    <div style={{backgroundColor: "rgba(244, 246, 252, 1)"}}>
       <p className={ikegaistyle.textcolor}>{anzahlAuswahl}/3 ausgewählt</p>
-      <div className={ikegaistyle.buttonbox} >
-        <IkegaiButton name="Natur & Technik" lifting_up={handleClick} />
-        <IkegaiButton name="Kreativ & Design" lifting_up={handleClick} />
-        <IkegaiButton name="Sprache" lifting_up={handleClick} />
-        <IkegaiButton name="Geschichte    & Gesellschaftsw." lifting_up={handleClick} />
-        <IkegaiButton name="Gesundheit & Medizin" lifting_up={handleClick} />
-        <IkegaiButton name="Wirtschaft & Verkauf" lifting_up={handleClick} />
-        <IkegaiButton name="Handwerk & Technik " lifting_up={handleClick} />
-       
-        <IkegaiButton name="Sicherheit" lifting_up={handleClick} />
+      <div className={ikegaistyle.buttonbox}>
+        <IkegaiButton name="Selbstdiszipliniert" lifting_up={handleClick} />
+        <IkegaiButton name="Ambitioniert" lifting_up={handleClick} />
+        <IkegaiButton name="Emphatisch" lifting_up={handleClick} />
+        <IkegaiButton name="Kreativ" lifting_up={handleClick} />
+        <IkegaiButton name="Offen für Neues" lifting_up={handleClick} />
+        <IkegaiButton name="Anpassungsfähig" lifting_up={handleClick} />
+        <IkegaiButton name="Selbstbewusst" lifting_up={handleClick} />
+        <IkegaiButton name="Teamplayer" lifting_up={handleClick} />
+        <IkegaiButton name="Zuverlässig" lifting_up={handleClick} />
       </div>
     <div style={{paddingTop: "7%"}}>
-      <CalltoactionIkegai activatenum={3} linkname = {""} maxnum={anzahlAuswahl} name={"Test beenden"} />
+      <CalltoactionIkegai activatenum={3} linkname ={"/Ikegai_Gegensatz"} maxnum={anzahlAuswahl} name={"Nächste Frage"} />
     </div>
     
     </div>
