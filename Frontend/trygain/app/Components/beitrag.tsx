@@ -36,7 +36,7 @@ export default function Beitrag({bordercolor ,  bild_url, heading, caption , sma
       border: `2px solid ${bordercolor}`
     }}>
       {/* Ihr vorhandener Code bleibt unverändert */}
-      <div style={{ marginTop: "1.4svh",  display: "flex", alignItems: "center", color: '#0D276B', fontSize: "1.7vh", fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word' }}>
+      <div style={{marginBottom: "1.4svh", marginTop: "1.4svh",  display: "flex", alignItems: "center", color: '#0D276B', fontSize: "1.7vh", fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word' }}>
   
         <div style={{ height: "2.5svh", width: "2.5svh", marginRight: "5.5svw", marginLeft: "9.7svw" }}>
           <Image alt={smallicon} src={smallicon} layout='responsive' width={100} height={100} objectFit="cover" />
