@@ -91,7 +91,7 @@ export default function Home() {
         <IkegaiButton name="Sicherheit" lifting_up={handleClick} />
       </div>
     <div style={{paddingTop: "7%"}}>
-      <CalltoactionIkegai activatenum={3} linkname = {""} maxnum={anzahlAuswahl} name={"Test beenden"} />
+      <CalltoactionIkegai activatenum={3} linkname = {"/Feed"} maxnum={anzahlAuswahl} name={"Test beenden"} />
     </div>
     
     </div>
