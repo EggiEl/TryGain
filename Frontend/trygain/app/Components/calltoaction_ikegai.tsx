@@ -20,6 +20,12 @@ export default function CalltoactionIkegai({maxnum, name, linkname, activatenum 
     const [stateactivate, setstateacitvate] = useState(false)
 
 
+  function handleÜberspringen() {
+    const baseUrl = window.location.origin;;
+      window.location.href = `${baseUrl}${"/Feed"}`;
+
+  }
+
   const handleClick = () => {
     if (maxnum ==activatenum ) {
       const baseUrl = window.location.origin;;
@@ -47,7 +53,7 @@ export default function CalltoactionIkegai({maxnum, name, linkname, activatenum 
           </button>
           
         </div>
-        <div style={{color: '#0D276B', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', marginTop:"2%"}}>Ikigai überspringen</div>
+        <div style={{color: '#0D276B', fontSize: 16, fontFamily: 'Inter', fontWeight: '400', marginTop:"2%"}} onClick={handleÜberspringen}>Ikigai überspringen</div>
       </div>
     )
 

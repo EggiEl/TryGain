@@ -64,6 +64,8 @@ export default function Beitrag({bordercolor ,  bild_url, heading, caption , sma
       {mengesymbolClicked ? (
         <div style={{ overflowX: "scroll", display: "flex", flexDirection: "row" }}>
         <div style={{ display: "flex", flexDirection: "row", width: "5000px" }}> {/* Ändern Sie die Breite entsprechend Ihrer Anforderungen */}
+          <Ähnlich srcpic="/andrew-george-g-fm27_BRyQ-unsplash.jpg" alt="" description="Universität Ulm"/>
+
           <Ähnlich srcpic="/Frame 51 (1).png" alt="" description="THI - Ingoldstadt"/>
           <Ähnlich srcpic="/Frame 56.png" alt="" description="Hochschule Ansbach" />
           <Ähnlich srcpic="/Frame 57.png" alt="" description="Hochschule Neu-Ulm" />
